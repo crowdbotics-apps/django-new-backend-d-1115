@@ -60,3 +60,13 @@ class R3(models.Model):
         "users.User", on_delete=models.CASCADE, related_name="r3_r5",
     )
     r6 = models.CharField(max_length=26,)
+
+
+class R4(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
+
+
+class R6(models.Model):
+    "Generated Model"
+    r2 = models.BigIntegerField()
