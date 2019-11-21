@@ -1,6 +1,11 @@
 from rest_framework import viewsets
 import json
-from .serializers import CustomTextSerializer, HomePageSerializer, R1Serializer
+from .serializers import (
+    CustomTextSerializer,
+    HomePageSerializer,
+    R1Serializer,
+    R2Serializer,
+)
 
 from django import apps
 from django.core.management import call_command
@@ -21,7 +26,7 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import CustomText, HomePage, R1
+from home.models import CustomText, HomePage, R1, R2
 
 
 class SignupViewSet(ModelViewSet):
@@ -93,3 +98,8 @@ class AppReportView(APIView):
 class R1ViewSet(viewsets.ModelViewSet):
     serializer_class = R1Serializer
     queryset = R1.objects.all()
+
+
+class R2ViewSet(viewsets.ModelViewSet):
+    serializer_class = R2Serializer
+    queryset = R2.objects.all()
