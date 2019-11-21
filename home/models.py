@@ -40,7 +40,6 @@ class R1(models.Model):
 class R2(models.Model):
     "Generated Model"
     r1 = models.BigIntegerField()
-    r2 = models.BigIntegerField()
     r3 = models.ForeignKey(
         "users.User", on_delete=models.CASCADE, related_name="r2_r3",
     )
