@@ -44,3 +44,19 @@ class R2(models.Model):
     r3 = models.ForeignKey(
         "users.User", on_delete=models.CASCADE, related_name="r2_r3",
     )
+
+
+class R3(models.Model):
+    "Generated Model"
+    r1 = models.ForeignKey(
+        "home.CustomText", on_delete=models.CASCADE, related_name="r3_r1",
+    )
+    r2 = models.ForeignKey(
+        "home.HomePage", on_delete=models.CASCADE, related_name="r3_r2",
+    )
+    r3 = models.ForeignKey("home.R1", on_delete=models.CASCADE, related_name="r3_r3",)
+    r4 = models.ForeignKey("home.R2", on_delete=models.CASCADE, related_name="r3_r4",)
+    r5 = models.ForeignKey(
+        "users.User", on_delete=models.CASCADE, related_name="r3_r5",
+    )
+    r6 = models.CharField(max_length=26,)
