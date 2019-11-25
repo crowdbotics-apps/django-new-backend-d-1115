@@ -6,23 +6,25 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0006_remove_r2_r2'),
+        ("home", "0006_remove_r2_r2"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='r6',
-            name='r1',
+            model_name="r6",
+            name="r1",
             field=models.BigIntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='r6',
-            name='r3',
-            field=models.DecimalField(blank=True, decimal_places=10, max_digits=30, null=True),
+            model_name="r6",
+            name="r3",
+            field=models.DecimalField(
+                blank=True, decimal_places=10, max_digits=30, null=True
+            ),
         ),
         migrations.AddField(
-            model_name='r6',
-            name='r4',
+            model_name="r6",
+            name="r4",
             field=models.DateTimeField(auto_now_add=True, null=True),
         ),
     ]
