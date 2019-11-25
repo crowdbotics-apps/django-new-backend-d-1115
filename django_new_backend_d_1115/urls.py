@@ -32,6 +32,7 @@ urlpatterns = [
     path("rest-auth/registration/", include("rest_auth.registration.urls")),
     path("home/", include("home.urls")),
     path("api/v1/", include("homex.api.v1.urls")),
+    path("homex/", include("homex.urls")),
 ]
 
 admin.site.site_header = "DJANGO-NEW-BACKEND"

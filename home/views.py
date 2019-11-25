@@ -1,9 +1,6 @@
 from django.views.generic import CreateView, UpdateView, DetailView, ListView
 from django.shortcuts import render
-
-# Create your views here.
-
-from home.models import CustomText, HomePage
+from .models import CustomText, R4, R6, R3, HomePage, R2, R1
 
 
 def home(request):
