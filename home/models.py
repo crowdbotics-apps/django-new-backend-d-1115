@@ -64,11 +64,16 @@ class R3(models.Model):
 class R4(models.Model):
     "Generated Model"
     r1 = models.BigIntegerField()
+    r2 = models.DecimalField(max_digits=30, decimal_places=10, blank=True, null=True,)
+    r3 = models.DateTimeField(
+        auto_now=False, auto_now_add=False, blank=True, null=True,
+    )
+    r4 = models.DecimalField(max_digits=30, decimal_places=10, blank=True, null=True,)
 
 
 class R6(models.Model):
     "Generated Model"
     r2 = models.BigIntegerField()
-    r1 = models.BigIntegerField(blank=True, null=True,)
-    r3 = models.DecimalField(max_digits=30, decimal_places=10, blank=True, null=True,)
-    r4 = models.DateTimeField(auto_now=False, auto_now_add=True, blank=True, null=True,)
+    r1 = models.BigIntegerField(null=True, blank=True,)
+    r3 = models.DecimalField(null=True, blank=True, max_digits=30, decimal_places=10,)
+    r4 = models.DateTimeField(null=True, blank=True, auto_now=False, auto_now_add=True,)

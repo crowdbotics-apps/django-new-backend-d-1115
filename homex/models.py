@@ -8,9 +8,9 @@ class XXX(models.Model):
     r3 = models.DateTimeField(null=True, blank=True, auto_now=False, auto_now_add=True,)
     r4 = models.ForeignKey(
         "home.R6",
-        on_delete=models.CASCADE,
-        blank=True,
         null=True,
+        blank=True,
+        on_delete=models.CASCADE,
         related_name="xxx_r4",
     )
 
