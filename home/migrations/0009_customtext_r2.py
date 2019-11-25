@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0008_auto_20191125_1416'),
+        ("home", "0008_auto_20191125_1416"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='customtext',
-            name='r2',
-            field=models.DecimalField(blank=True, decimal_places=10, max_digits=30, null=True),
+            model_name="customtext",
+            name="r2",
+            field=models.DecimalField(
+                blank=True, decimal_places=10, max_digits=30, null=True
+            ),
         ),
     ]

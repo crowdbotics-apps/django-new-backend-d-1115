@@ -7,7 +7,7 @@ from django.db import models
 
 class CustomText(models.Model):
     title = models.CharField(max_length=150,)
-    r2 = models.DecimalField(max_digits=30, decimal_places=10, blank=True, null=True,)
+    r2 = models.DecimalField(null=True, blank=True, max_digits=30, decimal_places=10,)
 
     def __str__(self):
         return self.title
@@ -36,6 +36,7 @@ class HomePage(models.Model):
 class R1(models.Model):
     "Generated Model"
     r1 = models.BigIntegerField()
+    r2 = models.BigIntegerField(blank=True, null=True,)
 
 
 class R2(models.Model):
@@ -65,11 +66,11 @@ class R3(models.Model):
 class R4(models.Model):
     "Generated Model"
     r1 = models.BigIntegerField()
-    r2 = models.DecimalField(max_digits=30, decimal_places=10, blank=True, null=True,)
+    r2 = models.DecimalField(null=True, blank=True, max_digits=30, decimal_places=10,)
     r3 = models.DateTimeField(
-        auto_now=False, auto_now_add=False, blank=True, null=True,
+        null=True, blank=True, auto_now=False, auto_now_add=False,
     )
-    r4 = models.DecimalField(max_digits=30, decimal_places=10, blank=True, null=True,)
+    r4 = models.DecimalField(null=True, blank=True, max_digits=30, decimal_places=10,)
 
 
 class R6(models.Model):
