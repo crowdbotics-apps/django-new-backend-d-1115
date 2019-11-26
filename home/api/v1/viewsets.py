@@ -1,13 +1,18 @@
 from rest_framework import viewsets
 import json
 from .serializers import (
+    BVVVVSerializer,
     CustomTextSerializer,
+    FRFRFRSerializer,
+    GffffSerializer,
+    GGGGSerializer,
     HomePageSerializer,
     R1Serializer,
     R2Serializer,
     R3Serializer,
     R4Serializer,
     R6Serializer,
+    TGGGGSerializer,
 )
 
 from django import apps
@@ -29,7 +34,20 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import CustomText, HomePage, R1, R2, R3, R4, R6
+from home.models import (
+    BVVVV,
+    CustomText,
+    FRFRFR,
+    Gffff,
+    GGGG,
+    HomePage,
+    R1,
+    R2,
+    R3,
+    R4,
+    R6,
+    TGGGG,
+)
 
 
 class SignupViewSet(ModelViewSet):
@@ -121,3 +139,28 @@ class R4ViewSet(viewsets.ModelViewSet):
 class R6ViewSet(viewsets.ModelViewSet):
     serializer_class = R6Serializer
     queryset = R6.objects.all()
+
+
+class BVVVVViewSet(viewsets.ModelViewSet):
+    serializer_class = BVVVVSerializer
+    queryset = BVVVV.objects.all()
+
+
+class GGGGViewSet(viewsets.ModelViewSet):
+    serializer_class = GGGGSerializer
+    queryset = GGGG.objects.all()
+
+
+class TGGGGViewSet(viewsets.ModelViewSet):
+    serializer_class = TGGGGSerializer
+    queryset = TGGGG.objects.all()
+
+
+class GffffViewSet(viewsets.ModelViewSet):
+    serializer_class = GffffSerializer
+    queryset = Gffff.objects.all()
+
+
+class FRFRFRViewSet(viewsets.ModelViewSet):
+    serializer_class = FRFRFRSerializer
+    queryset = FRFRFR.objects.all()

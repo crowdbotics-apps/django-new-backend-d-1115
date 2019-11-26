@@ -36,7 +36,7 @@ class HomePage(models.Model):
 class R1(models.Model):
     "Generated Model"
     r1 = models.BigIntegerField()
-    r2 = models.BigIntegerField(blank=True, null=True,)
+    r2 = models.BigIntegerField(null=True, blank=True,)
 
 
 class R2(models.Model):
@@ -79,3 +79,28 @@ class R6(models.Model):
     r1 = models.BigIntegerField(null=True, blank=True,)
     r3 = models.DecimalField(null=True, blank=True, max_digits=30, decimal_places=10,)
     r4 = models.DateTimeField(null=True, blank=True, auto_now=False, auto_now_add=True,)
+
+
+class BVVVV(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
+
+
+class GGGG(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
+
+
+class TGGGG(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
+
+
+class Gffff(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
+
+
+class FRFRFR(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
