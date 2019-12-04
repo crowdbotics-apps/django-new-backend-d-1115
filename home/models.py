@@ -73,9 +73,9 @@ class R4(models.Model):
     r4 = models.DecimalField(null=True, blank=True, max_digits=30, decimal_places=10,)
     r5 = models.ForeignKey(
         "home.TGGGG",
-        on_delete=models.CASCADE,
-        blank=True,
         null=True,
+        blank=True,
+        on_delete=models.CASCADE,
         related_name="r4_r5",
     )
 
@@ -91,6 +91,13 @@ class R6(models.Model):
 class BVVVV(models.Model):
     "Generated Model"
     r1 = models.BigIntegerField()
+    r2 = models.OneToOneField(
+        "home.FRFRFR",
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name="bvvvv_r2",
+    )
 
 
 class GGGG(models.Model):
