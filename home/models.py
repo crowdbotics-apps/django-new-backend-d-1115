@@ -106,6 +106,13 @@ class GGGG(models.Model):
     r2 = models.ManyToManyField(
         "home.R4", blank=True, null=True, related_name="gggg_r2",
     )
+    r3 = models.ForeignKey(
+        "home.R1",
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name="gggg_r3",
+    )
 
 
 class TGGGG(models.Model):
