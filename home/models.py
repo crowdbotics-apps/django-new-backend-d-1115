@@ -104,14 +104,21 @@ class GGGG(models.Model):
     "Generated Model"
     r1 = models.BigIntegerField()
     r2 = models.ManyToManyField(
-        "home.R4", blank=True, null=True, related_name="gggg_r2",
+        "home.R4", null=True, blank=True, related_name="gggg_r2",
     )
     r3 = models.ForeignKey(
         "home.R1",
+        null=True,
+        blank=True,
+        on_delete=models.CASCADE,
+        related_name="gggg_r3",
+    )
+    r4 = models.OneToOneField(
+        "home.R2",
         on_delete=models.CASCADE,
         blank=True,
         null=True,
-        related_name="gggg_r3",
+        related_name="gggg_r4",
     )
 
 
