@@ -94,6 +94,13 @@ class GGGG(models.Model):
 class TGGGG(models.Model):
     "Generated Model"
     r1 = models.BigIntegerField()
+    r2 = models.OneToOneField(
+        "home.R6",
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name="tgggg_r2",
+    )
 
 
 class Gffff(models.Model):
