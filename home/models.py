@@ -93,9 +93,9 @@ class BVVVV(models.Model):
     r1 = models.BigIntegerField()
     r2 = models.OneToOneField(
         "home.FRFRFR",
-        on_delete=models.CASCADE,
-        blank=True,
         null=True,
+        blank=True,
+        on_delete=models.CASCADE,
         related_name="bvvvv_r2",
     )
 
@@ -120,6 +120,13 @@ class TGGGG(models.Model):
 class Gffff(models.Model):
     "Generated Model"
     r1 = models.BigIntegerField()
+    r2 = models.OneToOneField(
+        "home.R1",
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name="gffff_r2",
+    )
 
 
 class FRFRFR(models.Model):
