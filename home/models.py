@@ -71,6 +71,13 @@ class R4(models.Model):
         null=True, blank=True, auto_now=False, auto_now_add=False,
     )
     r4 = models.DecimalField(null=True, blank=True, max_digits=30, decimal_places=10,)
+    r5 = models.ForeignKey(
+        "home.TGGGG",
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name="r4_r5",
+    )
 
 
 class R6(models.Model):
@@ -96,9 +103,9 @@ class TGGGG(models.Model):
     r1 = models.BigIntegerField()
     r2 = models.OneToOneField(
         "home.R6",
-        on_delete=models.CASCADE,
-        blank=True,
         null=True,
+        blank=True,
+        on_delete=models.CASCADE,
         related_name="tgggg_r2",
     )
 
